@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<style> 
+#panel1, #flip1 {
+  padding: 5px;
+  text-align: center;
+  background-color: green;
+  border: solid 1px green;
+}
+
+#panel1 {
+  padding: 50px;
+  display: none;
+}
+#panel2, #flip2 {
+  padding: 5px;
+  text-align: center;
+  background-color: #26dc9c;
+  border: solid 1px #26dc9c;
+}
+
+#panel2 {
+  padding: 50px;
+}
+
+#panel3, #flip3 {
+  padding: 5px;
+  text-align: center;
+  background-color: #db1aed;
+  border: solid 1px #db1aed;
+}
+
+#panel3 {
+  padding: 50px;
+  display: none;
+}
+</style>
+<body>
+<div id="flip1">SlideDown</div>
+<div id="panel1">Hello !</div> <br><br><br>
+
+ 
+<div id="flip2"> slide up </div>
+<div id="panel2">Hello !</div> <br><br><br>
+
+<div id="flip3"> slide toggle </div>
+<div id="panel3">Hello !</div> 
+</body>
+<script> 
+    $(document).ready(function(){
+      $("#flip1").click(function(){
+        $("#panel1").slideDown("slow");
+      });
+    });
+
+
+    $(document).ready(function(){
+  $("#flip2").click(function(){
+    $("#panel2").slideUp("slow");
+  });
+});
+
+
+$(document).ready(function(){
+  $("#flip3").click(function(){
+    $("#panel3").slideToggle("slow");
+  });
+});
+    </script>
+</html>
